@@ -3,14 +3,12 @@ $(document).ready(function(){
 
     function fizzbuzz(max) {
         for (var i = 1; i <= max; i++) {
-            if ((i % 3) === 0) {
-                if ((i % 5) === 0) {
-                    console.log('fizz buzz');
-                    $('body').append('fizz buzz<br />');
-                } else {
-                    console.log('fizz');
-                    $('body').append('fizz<br />');
-                }
+            if ((i % 3) === 0 && (i % 5) === 0) {
+                console.log('fizzbuzz');
+                $('body').append('fizzbuzz<br />');
+            } else if ((i % 3) === 0) {
+                console.log('fizz');
+                $('body').append('fizz<br />');
             } else if ((i % 5) === 0) {
                 console.log('buzz');
                 $('body').append('buzz<br />');
