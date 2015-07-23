@@ -1,6 +1,13 @@
 // app.js
 $(document).ready(function(){
 
+    $('body').on('click', '#fizzbuzz-button', function() {
+        console.log('fizzbuzz-button clicked');
+        var maximum = parseInt($('#fizzbuzz-max').val());
+        // console.log(maximum + 10);
+        fizzbuzz(maximum);
+    });
+
     function fizzbuzz(max) {
         var result = '';
         for (var i = 1; i <= max; i++) {
@@ -19,7 +26,8 @@ $(document).ready(function(){
             }
             $('body').append(result);
         }
-    };
-    fizzbuzz(15);
+    }
+
+    //fizzbuzz(15);
 });
 // get max value from user. Check that it's an integer.
