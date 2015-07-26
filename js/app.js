@@ -16,20 +16,24 @@ $(document).ready(function(){
         var result = '';
         for (var i = 1; i <= max; i++) {
             if ((i % 3 === 0) && (i % 5 === 0)) {
-                // console.log('fizzbuzz');
+                // logIt('fizzbuzz');
                 result = 'fizzbuzz<br />';
             } else if (i % 3 === 0) {
-                // console.log('fizz');
+                // logIt('fizz');
                 result = 'fizz<br />';
             } else if (i % 5 === 0) {
-                // console.log('buzz');
+                // logIt('buzz');
                 result = 'buzz<br />';
             } else {
-                // console.log(i);
+                // logIt(i);
                 result = i + '<br />';
             }
             $('body').append(result);
         }
+    }
+
+    function logIt(message) {
+        console.log(message);
     }
 
 });
