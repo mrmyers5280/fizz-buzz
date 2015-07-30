@@ -14,21 +14,23 @@ $(document).ready(function(){
 
     function fizzbuzz(max) {
         var result = '';
+        var resultFizz = 'fizz';
+        var resultBuzz = 'buzz';
         for (var i = 1; i <= max; i++) {
-            if ((i % 3 === 0) && (i % 5 === 0)) {
+            if (i % 15 === 0) {
                 // logIt('fizzbuzz');
-                result = 'fizzbuzz<br />';
+                result = resultFizz + resultBuzz;
             } else if (i % 3 === 0) {
                 // logIt('fizz');
-                result = 'fizz<br />';
+                result = resultFizz;
             } else if (i % 5 === 0) {
                 // logIt('buzz');
-                result = 'buzz<br />';
+                result = resultBuzz;
             } else {
                 // logIt(i);
-                result = i + '<br />';
+                result = i;
             }
-            $('body').append(result);
+            $('body').append(result + '<br />');
         }
     }
 
